@@ -1,0 +1,96 @@
+html{
+    font-family: 'Roboto Condensed';
+    background-color: hsl(62, 0%, 12%);
+    box-sizing: border-box;
+    color: white;
+    text-transform: uppercase;
+}
+
+.blurred{
+    filter: blur(3px);
+    overflow: hidden;
+}
+
+.header{
+    margin-top: 1rem;
+    display: flex;
+}
+
+.header-left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3rem;
+    border-right: 4px solid hsl(62, 0%, 18%);
+}
+
+.weather-icon{
+    height: 60px;
+    width: 60px;
+}
+
+.weather-icon.large{
+    height: 120px;
+    width: 120px;
+}
+
+.value-sub-unit{
+    font-size: 0.8rem;
+}
+
+.header-right{
+    width: 50%;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
+    font-size: 1.2rem;
+}
+
+.info-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-section{
+    justify-content: center;
+    margin:2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,100px);
+    gap: 1rem;
+
+}
+
+.day-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid hsl(62, 0%, 18%);
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: 0.5s;
+}
+
+.day-card:hover{
+    border: 3px solid hsl(62, 0%, 30%);
+}
+
+table{
+    border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.hour-section{
+    width: 100%;
+    text-align: center;
+    background-color: hsl(62, 0%, 20%);
+}
+
+.hour-row:nth-child(2n){
+    background-color: hsl(62, 0%, 25%);
+}
