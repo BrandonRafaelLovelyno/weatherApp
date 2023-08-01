@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('/jsonData')
       .then(response => response.json())
       .then(data => {
+        console.log(data)
+        main(data)
         document.body.classList.remove('blurred')
       })
       .catch(error => {
@@ -9,4 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 });
 
-//data adalah object dengan properti curremt, daily, dan hourly
+function main(data){
+renderCurrentHeader(data.current)
+}

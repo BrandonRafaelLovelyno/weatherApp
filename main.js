@@ -16,9 +16,10 @@ app.get('/', (req, res) => {
 })
 
 app.get('/jsonData',(req,res)=>{
-  weather.getWeatherData(10,10,Intl.DateTimeFormat().resolvedOptions().timezone)
+  weather.getWeatherData(10,10,Intl.DateTimeFormat().resolvedOptions().timeZone)
     .then(
       function (weatherObject){
+      //console.log(weatherObject)
       res.json(weatherObject)
       }
     )
