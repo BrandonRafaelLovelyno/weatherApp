@@ -12,33 +12,33 @@
         <div class="header-left">
             <img data-header-icon src="/images/cloud.png" class="weather-icon large">
             <div class="header-current-temp">
-                <span data-current-temp>31 <span>&deg;</span></span>
+                <span data-current-temp>31 </span><span>&deg;</span>
             </div>
         </div>
         <div class="header-right">
             <div class="info-container">
                 <div class="label">High</div>
-                <div data-current-high>31 <span>&deg;</span></div>
+                <div><span data-current-high>31 </span><span>&deg;</span></div>
             </div>
             <div class="info-container">
                 <div class="label">FL High</div>
-                <div data-current-feels-high>31 <span>&deg;</span></div>
+                <div><span data-current-feels-high >31</span><span>&deg;</span></div>
             </div>
             <div class="info-container">
                 <div class="label">Wind</div>
-                <div data-current-wind>31 <span class="value-sub-unit">mph</span></div>
+                <div><span data-current-wind>31 </span><span class="value-sub-unit">mph</span></div>
             </div>
             <div class="info-container">
                 <div class="label">Low</div>
-                <div data-current-low>31 <span>&deg;</span></div>
+                <div><span data-current-low>31 </span><span>&deg;</span></div>
             </div>
             <div class="info-container">
                 <div class="label">FL Low</div>
-                <div data-current-feels-low>31 <span>&deg;</span></div>
+                <div><span data-current-feels-low>31 </span><span>&deg;</span></div>
             </div>
             <div class="info-container">
                 <div class="label">Precip</div>
-                <div data-current-precip>31 <span class="value-sub-unit">in</span></div>
+                <div><span data-current-precip>31 </span><span class="value-sub-unit">in</span></div>
             </div>
         </div>
     </header>
@@ -79,8 +79,8 @@
             <div>32 <span>&deg;</span></div>
         </div>
     </section>
-    <table class="hour-section">
-        <tbody data-hour-section>
+    <table>
+        <tbody class="hour-section">
             <tr class="hour-row">
                 <td>
                     <div class="info-group">
@@ -303,12 +303,12 @@
         </div>
     </template>
 
-    <template>
+    <template class="hour-row-template">
         <tr class="hour-row">
             <td>
                 <div class="info-group">
                     <div  data-row-day class="label"></div>
-                    <div>3 pm</div>
+                    <div data-row-hour></div>
                 </div>
             </td>
             <td>
@@ -317,7 +317,7 @@
             <td>
                 <div class="info-group">
                     <div class="label">Temp</div>
-                    <div><span data-row-temp></span></div>
+                    <div><span data-row-temp></span>&deg;</div>
                 </div>
             </td>
             <td>
@@ -340,8 +340,8 @@
             </td>
         </tr>
     </template>
-    <script src="/js/client.js" ></script>
     <script src="/js/iconMap.js"></script>
     <script src="/js/render.js"></script>
+    <script src="/js/client.js" ></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const weather=require('../weatherApp/weather')
+const weather = require('../weatherApp/weather')
 const express = require('express')
 const app = express()
 
@@ -15,12 +15,15 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-app.get('/jsonData',(req,res)=>{
-  weather.getWeatherData(10,10,Intl.DateTimeFormat().resolvedOptions().timeZone)
+app.get('/jsonData', (req, res) => {
+  const latitude=parseFloat(req.query.latitude)
+  const longitude=parseFloat(req.query.longitude)
+  console.log(latitude,longitude)
+  weather.getWeatherData(latitude,longitude, Intl.DateTimeFormat().resolvedOptions().timeZone)
     .then(
-      function (weatherObject){
-      //console.log(weatherObject)
-      res.json(weatherObject)
+      function (weatherObject) {
+        //console.log(weatherObject)
+        res.json(weatherObject)
       }
     )
 })
